@@ -45,7 +45,6 @@ PSize = st.sidebar.multiselect(
     default=df["Position_Size"].unique()
 )
 
-
 sector = st.sidebar.multiselect(
     "Select the Sector:",
     options=df["Sector"].unique(),
@@ -114,10 +113,6 @@ VNQ_mtd_2024 = VNQ_mtd_2024.sum()
 
 VNQ_YTD_return = round((((VNQ_mtd_2024 - VNQ_YE_2023) / VNQ_YE_2023 ) * 100),2)
 
-#since inception performance
-#since_inception_performance = round((( df['Unrealized P&L'].sum() / df['Cost Basis'].sum() )*100),2)
-
-
 
 left_column, middle_column1, middle_column2, right_column = st.columns(4)
 with left_column:
@@ -152,17 +147,12 @@ with right_column:
 
 st.markdown("---")
 
-#st.dataframe(df_selection)
-#st.dataframe(df)
-
 col1, col2, col3 = st.columns(3)
 
-# Expected Dividend by month
-
+# 1. Expected Dividend by month
 Expected_dividend_by_month = (
 
 df_selection.groupby(by=["Month"]).sum()[["Next_div_receiveable"]].sort_values(by="Next_div_receiveable")
-
 )
 
 fig_div = px.bar(
@@ -177,35 +167,28 @@ fig_div = px.bar(
 
 col1.plotly_chart(fig_div)
 
-# Portfolio by currency
-
+# 2. Portfolio by currency
 fig_ccy = px.pie(
         df,
         values='Market Value',
         names='CCY',
         title="<b>Portfolio by currency</b>",
 )
-
 col2.plotly_chart(fig_ccy)
 
-#Portfolio by Industry
-
+# 3. Portfolio by Industry
 fig_industry = px.pie(
         df,
         values='Market Value',
         names='Industry',
-        title='<b>Portfolio by industry</b>'
-        
+        title='<b>Portfolio by industry</b>'      
 )
-
 col3.plotly_chart(fig_industry)
 
-#PnL By ticker
-
+# 4. PnL By ticker
 PnL_by_ticker_pct = (
 
 df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized PnL"]].sort_values(by="Unrealized PnL")
-
 )
 
 fig_PnL_by_ticker_pct = px.bar(
@@ -220,12 +203,10 @@ fig_PnL_by_ticker_pct = px.bar(
 
 col1.plotly_chart(fig_PnL_by_ticker_pct)
 
-#Unrealized gain/loss by sector
-
+# 5. Unrealized gain/loss by sector
 Unrealized_gl_by_sector = (
 
 df_selection.groupby(by=["Industry"]).sum()[["Unrealized P&L"]].sort_values(by="Unrealized P&L")
-
 )
 
 fig_industry_unrlzd = px.bar(
@@ -240,12 +221,10 @@ fig_industry_unrlzd = px.bar(
 
 col2.plotly_chart(fig_industry_unrlzd)
 
-#PnL By ticker %
-
+# 6. PnL By ticker %
 PnL_by_ticker = (
 
 df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized P&L"]].sort_values(by="Unrealized P&L")
-
 )
 
 fig_PnL_by_ticker = px.bar(
@@ -260,11 +239,10 @@ fig_PnL_by_ticker = px.bar(
 
 col3.plotly_chart(fig_PnL_by_ticker)
 
-#Ticker by size
+# 7.Ticker by size
 ticker_by_size = (
 
 df_selection.groupby(by=["Financial Instrument"]).sum()[["% of Net Liq"]].sort_values(by="% of Net Liq")
-
 )
 
 fig_ticker_by_size = px.bar(
@@ -278,13 +256,11 @@ fig_ticker_by_size = px.bar(
 )
 
 col1.plotly_chart(fig_ticker_by_size)
-#
 
 #YTD price return chart
 YtD_price_return = (
 
 df_selection.groupby(by=["Financial Instrument"]).sum()[["YtD price return"]].sort_values(by="YtD price return")
-
 )
 
 fig_YtD_price_return = px.bar(
@@ -298,13 +274,11 @@ fig_YtD_price_return = px.bar(
 )
 
 col2.plotly_chart(fig_YtD_price_return)
-#
 
 #YTD price return chart
 MtD_price_return = (
 
 df_selection.groupby(by=["Financial Instrument"]).sum()[["MtD price return"]].sort_values(by="MtD price return")
-
 )
 
 fig_MtD_price_return = px.bar(
@@ -318,13 +292,11 @@ fig_MtD_price_return = px.bar(
 )
 
 col3.plotly_chart(fig_MtD_price_return)
-#
 
 st.markdown("---")
 st.title(":bar_chart: Activity log")
 
 #col4= st.columns(1)
-
 st.dataframe(df_log)
 
 st.markdown("---")
@@ -341,5 +313,4 @@ fig_VNQ.add_trace(go.Scatter(x=data.index, y=data["Close"]))
 fig_VNQ.update_layout(yaxis_title='Stock Price (USD per Shares)')
 
 #fig_VNQ.show()
-
 st.plotly_chart(fig_VNQ)
