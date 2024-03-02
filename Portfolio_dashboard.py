@@ -9,33 +9,20 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-#@st.cache
-#def get_data():
-    #df = pd.read_csv(r'data\Portfolio_dataset_0423.csv)
-
-    #return df
-
 #emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
-st.set_page_config(page_title="Portfolio overview",
+st.set_page_config(page_title="Investment portfolio overview",
                     page_icon=":bar_chart:",
                     layout="wide"
 )
 
-#adress = r'C:\Users\Lubos\Dropbox\My PC (Lubos-PC1)\Desktop\python\data\Portfolio_dataset_1122.csv'
-#adress = r'https://raw.githubusercontent.com/Lubza/My-overview-app/master/Portfolio_dataset_1122.csv'
-adress = r'data/Portfolio_dataset_0124.csv'
-
+# Load dataset from IB TWS
+adress = r'data/Portfolio_dataset_0224.csv'
 df = pd.read_csv(adress, engine='python')
 
-#df = get_data()
-
-adress_log = r'Activity logs/Activity log 02022024.csv'
-
+# Load activity log dataset
+adress_log = r'Activity logs/Activity log 02292024.csv'
 df_log = pd.read_csv(adress_log, engine='python')
-
-#del df_log['Unnamed: 7']
-#del df_log['Unnamed: 8']
 
 #df_log['Price adj'] = df_log["Price"].str.replace("$","")
 df_log['Price adj'] = df_log['Price'].astype(float)
@@ -47,7 +34,6 @@ df_log['Year'] = df_log['Date adj'].dt.year
 df_log['Month'] = df_log['Date adj'].dt.month
 
 del df_log['Date adj']
-
 
 #---- SIDEBAR -----
 st.sidebar.title('Navigation')
@@ -90,7 +76,7 @@ df_selection = df.query(
 
 
 #-----MAINPAGE-----
-st.title(":bar_chart: Portfolio Overview as of Jan 2024")
+st.title(":bar_chart: Portfolio Overview as of Feb 2024")
 st.markdown('##')
 
 #TOP KPI's
@@ -114,7 +100,7 @@ div_yield = round(((Total_div_year/Total_MV) * 100),2)
 SPY_YE_2023 = pdr.DataReader('SPY','2023-12-29','2023-12-30')['Adj Close']
 SPY_YE_2023 = SPY_YE_2023.sum()
 
-SPY_mtd_2024 = pdr.DataReader('SPY','2024-01-31','2024-02-01')['Adj Close']
+SPY_mtd_2024 = pdr.DataReader('SPY','2024-02-29','2024-03-01')['Adj Close']
 SPY_mtd_2024 = SPY_mtd_2024.sum()
 
 SPY_YTD_return = round((((SPY_mtd_2024 - SPY_YE_2023) / SPY_YE_2023 ) * 100),2)
@@ -123,7 +109,7 @@ SPY_YTD_return = round((((SPY_mtd_2024 - SPY_YE_2023) / SPY_YE_2023 ) * 100),2)
 VNQ_YE_2023 = pdr.DataReader('VNQ','2023-12-29','2023-12-30')['Adj Close']
 VNQ_YE_2023 = VNQ_YE_2023.sum()
 
-VNQ_mtd_2024 = pdr.DataReader('VNQ','2024-01-31','2024-02-01')['Adj Close']
+VNQ_mtd_2024 = pdr.DataReader('VNQ','2024-02-29','2024-03-01')['Adj Close']
 VNQ_mtd_2024 = VNQ_mtd_2024.sum()
 
 VNQ_YTD_return = round((((VNQ_mtd_2024 - VNQ_YE_2023) / VNQ_YE_2023 ) * 100),2)
