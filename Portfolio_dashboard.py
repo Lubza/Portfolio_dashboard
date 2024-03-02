@@ -24,7 +24,6 @@ df = pd.read_csv(adress, engine='python')
 adress_log = r'Activity logs/Activity log 02292024.csv'
 df_log = pd.read_csv(adress_log, engine='python')
 
-#df_log['Price adj'] = df_log["Price"].str.replace("$","")
 df_log['Price adj'] = df_log['Price'].astype(float)
 df_log['Amount'] = df_log['Price adj'] * df_log['Qty']
 
