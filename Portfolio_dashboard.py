@@ -17,7 +17,7 @@ st.set_page_config(page_title="Investment portfolio overview",
 )
 
 # Load dataset from IB TWS
-adress = r'data/Portfolio_dataset_0324.csv'
+adress = r'data/Portfolio_dataset_0424.csv'
 df = pd.read_csv(adress, engine='python')
 
 # Load activity log dataset
@@ -74,7 +74,7 @@ df_selection = df.query(
 
 
 #-----MAINPAGE-----
-st.title(":bar_chart: Portfolio Overview as of Mar 2024")
+st.title(":bar_chart: Portfolio Overview as of Apr 2024")
 st.markdown('##')
 
 #TOP KPI's
@@ -85,7 +85,7 @@ Total_unrlzd = round(df_selection['Unrealized P&L'].sum(), 2)
 
 #YTD portfolio performance
 Portfolio_YE23 =  74849.6
-deposits = 0
+deposits = 5363 + 2154
 YTD_performance = round((((Account_balance - deposits - Portfolio_YE23) / Portfolio_YE23) * 100),2)
 
 #Dividend calculation
@@ -98,7 +98,7 @@ div_yield = round(((Total_div_year/Total_MV) * 100),2)
 SPY_YE_2023 = pdr.DataReader('SPY','2023-12-29','2023-12-30')['Adj Close']
 SPY_YE_2023 = SPY_YE_2023.sum()
 
-SPY_mtd_2024 = pdr.DataReader('SPY','2024-03-28','2024-03-29')['Adj Close']
+SPY_mtd_2024 = pdr.DataReader('SPY','2024-04-30','2024-05-01')['Adj Close']
 SPY_mtd_2024 = SPY_mtd_2024.sum()
 
 SPY_YTD_return = round((((SPY_mtd_2024 - SPY_YE_2023) / SPY_YE_2023 ) * 100),2)
@@ -107,7 +107,7 @@ SPY_YTD_return = round((((SPY_mtd_2024 - SPY_YE_2023) / SPY_YE_2023 ) * 100),2)
 VNQ_YE_2023 = pdr.DataReader('VNQ','2023-12-29','2023-12-30')['Adj Close']
 VNQ_YE_2023 = VNQ_YE_2023.sum()
 
-VNQ_mtd_2024 = pdr.DataReader('VNQ','2024-03-28','2024-03-29')['Adj Close']
+VNQ_mtd_2024 = pdr.DataReader('VNQ','2024-04-30','2024-05-01')['Adj Close']
 VNQ_mtd_2024 = VNQ_mtd_2024.sum()
 
 VNQ_YTD_return = round((((VNQ_mtd_2024 - VNQ_YE_2023) / VNQ_YE_2023 ) * 100),2)
