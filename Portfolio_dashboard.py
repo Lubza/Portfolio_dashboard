@@ -9,6 +9,15 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+adress_portfolio_dataset = r'data/Portfolio_dataset_0424_new.csv'
+adress_log = r'Activity logs/Activity log 04302024.csv'
+
+start_date_YE = '2023-12-29'
+end_date_YE = '2023-12-30'
+start_date_ME = '2024-04-30'
+end_date_ME = '2024-05-01'
+
+
 #emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
 st.set_page_config(page_title="Investment portfolio overview",
@@ -17,11 +26,9 @@ st.set_page_config(page_title="Investment portfolio overview",
 )
 
 # Load dataset from IB TWS
-adress = r'data/Portfolio_dataset_0424.csv'
-df = pd.read_csv(adress, engine='python')
+df = pd.read_csv(adress_portfolio_dataset, engine='python')
 
 # Load activity log dataset
-adress_log = r'Activity logs/Activity log 03312024.csv'
 df_log = pd.read_csv(adress_log, engine='python')
 
 df_log['Price adj'] = df_log['Price'].astype(float)
@@ -95,19 +102,19 @@ Total_div_year = round((Divi * Shares).sum(),2)
 div_yield = round(((Total_div_year/Total_MV) * 100),2)
 
 #Calculating year-to-date price return of SPY
-SPY_YE_2023 = pdr.DataReader('SPY','2023-12-29','2023-12-30')['Adj Close']
+SPY_YE_2023 = pdr.DataReader('SPY',start_date_YE, end_date_YE)['Adj Close']
 SPY_YE_2023 = SPY_YE_2023.sum()
 
-SPY_mtd_2024 = pdr.DataReader('SPY','2024-04-30','2024-05-01')['Adj Close']
+SPY_mtd_2024 = pdr.DataReader('SPY', start_date_ME, end_date_ME)['Adj Close']
 SPY_mtd_2024 = SPY_mtd_2024.sum()
 
 SPY_YTD_return = round((((SPY_mtd_2024 - SPY_YE_2023) / SPY_YE_2023 ) * 100),2)
 
 #Calculating year-to-date price return of VNQ
-VNQ_YE_2023 = pdr.DataReader('VNQ','2023-12-29','2023-12-30')['Adj Close']
+VNQ_YE_2023 = pdr.DataReader('VNQ', start_date_YE, end_date_YE)['Adj Close']
 VNQ_YE_2023 = VNQ_YE_2023.sum()
 
-VNQ_mtd_2024 = pdr.DataReader('VNQ','2024-04-30','2024-05-01')['Adj Close']
+VNQ_mtd_2024 = pdr.DataReader('VNQ', start_date_ME, end_date_ME)['Adj Close']
 VNQ_mtd_2024 = VNQ_mtd_2024.sum()
 
 VNQ_YTD_return = round((((VNQ_mtd_2024 - VNQ_YE_2023) / VNQ_YE_2023 ) * 100),2)
@@ -177,10 +184,10 @@ col2.plotly_chart(fig_ccy)
 
 # 3. Portfolio by Industry
 fig_industry = px.pie(
-        df,
-        values='Market Value',
-        names='Industry',
-        title='<b>Portfolio by industry</b>'      
+                    df,
+                    values='Market Value',
+                    names='Industry',
+                    title='<b>Portfolio by industry</b>'
 )
 col3.plotly_chart(fig_industry)
 
