@@ -86,9 +86,9 @@ st.markdown('##')
 
 #TOP KPI's
 Total_net_liq = round(df_selection['% of Net Liq'].sum(), 2)
-Total_MV = round(df_selection['Market Value'].sum(), 1)
+Total_MV = round(df_selection['Market Value in USD'].sum(), 1)
 Account_balance = round(((100/Total_net_liq)*Total_MV), 2)
-Total_unrlzd = round(df_selection['Unrealized P&L'].sum(), 2)
+Total_unrlzd = round(df_selection['Unrealized P&L in USD'].sum(), 2)
 
 #YTD portfolio performance
 Portfolio_YE23 =  74849.6
@@ -96,7 +96,7 @@ deposits = 5363 + 2154
 YTD_performance = round((((Account_balance - deposits - Portfolio_YE23) / Portfolio_YE23) * 100),2)
 
 #Dividend calculation
-Divi = df['Dividends']
+Divi = df['Dividends in USD']
 Shares = df['Position']
 Total_div_year = round((Divi * Shares).sum(),2)
 div_yield = round(((Total_div_year/Total_MV) * 100),2)
@@ -158,12 +158,12 @@ col1, col2, col3 = st.columns(3)
 # 1. Expected Dividend by month
 Expected_dividend_by_month = (
 
-df_selection.groupby(by=["Month"]).sum()[["Next_div_receiveable"]].sort_values(by="Next_div_receiveable")
+df_selection.groupby(by=["Month"]).sum()[["Next_div_receiveable in USD"]].sort_values(by="Next_div_receiveable in USD")
 )
 
 fig_div = px.bar(
         Expected_dividend_by_month,
-        y = "Next_div_receiveable",
+        y = "Next_div_receiveable in USD",
         x = Expected_dividend_by_month.index,
         orientation="v",
         title="<b>Expected Dividend by month</b>",
@@ -176,7 +176,7 @@ col1.plotly_chart(fig_div)
 # 2. Portfolio by currency
 fig_ccy = px.pie(
         df,
-        values='Market Value',
+        values='Market Value in USD',
         names='CCY',
         title="<b>Portfolio by currency</b>",
 )
@@ -185,7 +185,7 @@ col2.plotly_chart(fig_ccy)
 # 3. Portfolio by Industry
 fig_industry = px.pie(
                     df,
-                    values='Market Value',
+                    values='Market Value in USD',
                     names='Industry',
                     title='<b>Portfolio by industry</b>'
 )
@@ -194,12 +194,12 @@ col3.plotly_chart(fig_industry)
 # 4. PnL By ticker
 PnL_by_ticker_pct = (
 
-df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized PnL"]].sort_values(by="Unrealized PnL")
+df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized PnL in USD"]].sort_values(by="Unrealized PnL in USD")
 )
 
 fig_PnL_by_ticker_pct = px.bar(
         PnL_by_ticker_pct,
-        y = 'Unrealized PnL',
+        y = 'Unrealized PnL in USD',
         x = PnL_by_ticker_pct.index,
         orientation='v',
         title='<b>Unrealized PnL by ticker %</b>',
@@ -212,12 +212,12 @@ col1.plotly_chart(fig_PnL_by_ticker_pct)
 # 5. Unrealized gain/loss by sector
 Unrealized_gl_by_sector = (
 
-df_selection.groupby(by=["Industry"]).sum()[["Unrealized P&L"]].sort_values(by="Unrealized P&L")
+df_selection.groupby(by=["Industry"]).sum()[["Unrealized P&L in USD"]].sort_values(by="Unrealized P&L in USD")
 )
 
 fig_industry_unrlzd = px.bar(
         Unrealized_gl_by_sector,
-        y = "Unrealized P&L",
+        y = "Unrealized P&L in USD",
         x = Unrealized_gl_by_sector.index,
         orientation="v",
         title="<b>Unrealized P/L by sector</b>",
@@ -230,12 +230,12 @@ col2.plotly_chart(fig_industry_unrlzd)
 # 6. PnL By ticker %
 PnL_by_ticker = (
 
-df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized P&L"]].sort_values(by="Unrealized P&L")
+df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized P&L in USD"]].sort_values(by="Unrealized P&L in USD")
 )
 
 fig_PnL_by_ticker = px.bar(
         PnL_by_ticker,
-        y = 'Unrealized P&L',
+        y = 'Unrealized P&L in USD',
         x = PnL_by_ticker.index,
         orientation='v',
         title='<b>PnL by ticker</b>',
