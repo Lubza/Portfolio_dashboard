@@ -17,7 +17,7 @@ st.set_page_config(page_title="Investment portfolio overview",
 )
 
 # Load dataset from IB TWS
-adress = r'data/Portfolio_dataset_0424.csv'
+adress = r'data/Portfolio_dataset_0424_new.csv'
 df = pd.read_csv(adress, engine='python')
 
 # Load activity log dataset
