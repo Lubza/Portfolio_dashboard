@@ -194,12 +194,12 @@ col3.plotly_chart(fig_industry)
 # 4. PnL By ticker
 PnL_by_ticker_pct = (
 
-df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized PnL in USD"]].sort_values(by="Unrealized PnL in USD")
+df_selection.groupby(by=["Financial Instrument"]).sum()[["Unrealized PnL %"]].sort_values(by="Unrealized PnL %")
 )
 
 fig_PnL_by_ticker_pct = px.bar(
         PnL_by_ticker_pct,
-        y = 'Unrealized PnL in USD',
+        y = 'Unrealized PnL %',
         x = PnL_by_ticker_pct.index,
         orientation='v',
         title='<b>Unrealized PnL by ticker %</b>',
