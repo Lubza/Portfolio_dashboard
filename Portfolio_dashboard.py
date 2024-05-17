@@ -9,7 +9,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-adress_portfolio_dataset = r'data/Portfolio_dataset_0424_new.csv'
+adress_portfolio_dataset = r'data/Portfolio_dataset_0424.csv'
 adress_log = r'Activity logs/Activity log 04302024.csv'
 
 start_date_YE = '2023-12-29'
