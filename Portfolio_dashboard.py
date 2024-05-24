@@ -9,7 +9,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-adress_portfolio_dataset = r'data/Portfolio_dataset_0524.csv'
+adress_portfolio_dataset = r'data/Portfolio_dataset_0524_updated.csv'
 adress_log = r'Activity logs/Activity log 04302024.csv'
 
 start_date_YE = '2023-12-29'
@@ -266,7 +266,7 @@ col1.plotly_chart(fig_ticker_by_size)
 #YTD price return chart
 YtD_price_return = (
 
-df_selection.groupby(by=["Financial Instrument"]).sum()[["YtD price return"]].sort_values(by="YtD price return")
+df_selection.groupby(by=["Financial Instrument_NEW"]).sum()[["YtD price return"]].sort_values(by="YtD price return")
 )
 
 fig_YtD_price_return = px.bar(
@@ -284,7 +284,7 @@ col2.plotly_chart(fig_YtD_price_return)
 #YTD price return chart
 MtD_price_return = (
 
-df_selection.groupby(by=["Financial Instrument"]).sum()[["MtD price return"]].sort_values(by="MtD price return")
+df_selection.groupby(by=["Financial Instrument_NEW"]).sum()[["MtD price return"]].sort_values(by="MtD price return")
 )
 
 fig_MtD_price_return = px.bar(
