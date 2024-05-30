@@ -9,7 +9,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-adress_portfolio_dataset = r'data/Portfolio_dataset_0524_updated.csv'
+adress_portfolio_dataset = r'data/Portfolio_dataset_0524.csv'
 adress_log = r'Activity logs/Activity log 04302024.csv'
 
 start_date_YE = '2023-12-29'
@@ -81,7 +81,7 @@ df_selection = df.query(
 
 
 #-----MAINPAGE-----
-st.title(":bar_chart: Portfolio Overview as of Apr 2024")
+st.title(":bar_chart: Portfolio Overview as of May 2024")
 st.markdown('##')
 
 #TOP KPI's
