@@ -53,16 +53,16 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 11/12/2020,USD,BOT,ENB,28.57,5,
 11/12/2020,USD,BOT,ACC,40.38,3,
 11/12/2020,USD,BOT,UMH,14.02,7,
-10/26/2020,GBP,BOT,BYG,11.06,25,New foregn holding
-10/26/2020,EUR,BOT,LI,12.14,40,New foregn holding
-10/26/2020,CAD,BOT,BEI.UN,27.56,11,New foregn holding
-10/29/2020,EUR,BOT,LI,10.77,17,
+10/26/2020,GBP,BOT,BYG.L,11.06,25,New foregn holding
+10/26/2020,EUR,BOT,LI.PA,12.14,40,New foregn holding
+10/26/2020,CAD,BOT,BEI-UN.TO,27.56,11,New foregn holding
+10/29/2020,EUR,BOT,LI.PA,10.77,17,
 11/19/2020,USD,SLD,VOD,16.285,-7,decreased VOD position realized gain (+18%)
 11/19/2020,USD,SLD,OXY,13.24,-15,decreased OXY position realized gain (+3%)
 11/20/2020,USD,SLD,OXY,13.475,-15,decreased OXY position realized gain (+5%)
 11/23/2020,USD,SLD,OXY,15.71,-15,decreased OXY position realized gain (+22%)
 11/24/2020,USD,SLD,OXY,16.755,-15,decreased OXY position realized gain (+30%)
-11/25/2020,CAD,BOT,REI.UN,18.18,26,New foregn holding
+11/25/2020,CAD,BOT,REI-UN.TO,18.18,26,New foregn holding
 11/30/2020,USD,BOT,STAG,29.71,7,New holding
 12/9/2020,USD,SLD,OXY,19.59,-17,Closed OXY position realized gain (52%)
 12/9/2020,USD,BOT,STAG,30.34,10,Increased position funded from WBA sale
@@ -134,7 +134,7 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 2/24/2022,USD,BOT,KGC,5.3,100,Increase position
 2/24/2022,USD,BOT,RICK,61.71,3,Increase position
 2/28/2022,USD,BOT,KGC,5.018,40,Increase position
-3/3/2022,CAD,BOT,NET.UN VENTURE,8,70,New holding
+3/3/2022,CAD,BOT,NET-UN.V,8,70,New holding
 3/3/2022,USD,SLD,SQM,73.465,-6,exit position
 3/4/2022,USD,SLD,MO,53.5,-36,exit position
 3/9/2022,USD,SLD,KGC 14APR22 6.0 C,0.21,-2,"Write Call option, to reduce miners exposure & short market view for gold price after RU/UA settles down"
@@ -153,16 +153,16 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 4/14/2022,USD,BOT,FSM 14APR22 5.0 C,0,1,expired
 4/19/2022,USD,SLD,ACC,64.9227,-17,ACC has been bought out
 4/22/2022,USD,SLD,MPW 20MAY22 19 P,0.62,-1,
-4/22/2022,EUR,BOT,DIC,13.9,100,New position
-4/22/2022,EUR,BOT,VNA,39.32,25,New position
+4/22/2022,EUR,BOT,BRNK.DE,13.9,100,New position
+4/22/2022,EUR,BOT,VNA.DE,39.32,25,New position
 4/27/2022,USD,BOT,OUT,26.265,40,New position
-5/11/2022,EUR,BOT,DIC,12.56,48,Increase position
-5/11/2022,EUR,BOT,VNA,33.86,10,Increase position
+5/11/2022,EUR,BOT,BRNK.DE,12.56,48,Increase position
+5/11/2022,EUR,BOT,VNA.DE,33.86,10,Increase position
 5/5/2022,USD,BOT,RICK,62.45,10,Increase position
 5/11/2022,USD,BOT,KGC,4.315,100,Increase position
 5/11/2022,USD,BOT,OUT,20.5593,24,Increase position
 5/19/2022,USD,BOT,MPW,19,100,Option exercise
-5/16/2022,EUR,BOT,VNA,33.18,10,
+5/16/2022,EUR,BOT,VNA.DE,33.18,10,
 9/17/2021,USD,BOT,AGI,7.5,100,Increase position
 9/20/2021,USD,BOT,BTG,3.585,80,Increase position
 11/29/2021,USD,BOT,BTG,3.99,176,Increase position
@@ -173,16 +173,16 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 9/20/2021,USD,BOT,KGC,5.3,55,Increase position
 11/29/2021,USD,BOT,KGC,5.98,30,Increase position
 9/20/2021,USD,BOT,VICI,29.21,10,Increase position
-11/29/2021,EUR,BOT,LI,19.195,21,Increase position
+11/29/2021,EUR,BOT,LI.PA,19.195,21,Increase position
 9/8/2020,USD,BOT,ENB,31.15,23,New position
-6/13/2022,EUR,BOT,DIC,11.66,9,Increase position
-6/13/2022,EUR,BOT,VNA,31.16,4,Increase position
+6/13/2022,EUR,BOT,BRNK.DE,11.66,9,Increase position
+6/13/2022,EUR,BOT,VNA.DE,31.16,4,Increase position
 6/13/2022,USD,BOT,MPW,15.075,6,Increase position
 6/13/2022,USD,BOT,OUT,16.545,8,Increase position
 6/13/2022,USD,BOT,RICK,49.433,2,Increase position
 6/13/2022,USD,BOT,STOR,24.865,4,Increase position
-6/20/2022,EUR,BOT,DIC,11.56,18,Increase position
-6/20/2022,EUR,BOT,VNA,31.5,6,Increase position
+6/20/2022,EUR,BOT,BRNK.DE,11.56,18,Increase position
+6/20/2022,EUR,BOT,VNA.DE,31.5,6,Increase position
 6/21/2022,USD,BOT,OUT,17.71,5,Increase position
 6/21/2022,USD,BOT,KGC,4.09,25,Increase position
 6/21/2022,USD,BOT,FSM,3.09,32,Increase position
@@ -201,15 +201,15 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 7/29/2022,USD,SLD,KOF,60.4,-5,exit position
 8/12/2022,USD,SLD,O,74.46,-8,exit position
 8/12/2022,USD,SLD,SRC,44.563,-10,exit position
-8/30/2022,EUR,BOT,DIC,10.26,30,Increase position
-8/30/2022,EUR,BOT,VNA,27.11,10,Increase position
+8/30/2022,EUR,BOT,BRNK.DE,10.26,30,Increase position
+8/30/2022,EUR,BOT,VNA.DE,27.11,10,Increase position
 10/19/2022,USD,BOT,GMRE,7.84,200,New position
 10/12/2022,USD,BOT,GRPN,7.39,50,New position
 10/19/2022,USD,BOT,GRPN,6.97,20,Increase position
 10/19/2022,USD,BOT,BTG,2.915,200,Increase position
 10/17/2022,USD,SLD,STOR,31.345,-119,STOR has been acquired at 32.25 settled in Q1 23
-10/24/2022,EUR,BOT,VNA,21.12,10,Increase position
-10/24/2022,EUR,BOT,DIC,7.09,28,Increase position
+10/24/2022,EUR,BOT,VNA.DE,21.12,10,Increase position
+10/24/2022,EUR,BOT,BRNK.DE,7.09,28,Increase position
 10/24/2022,USD,BOT,GRPN,6.51,15,Increase position
 11/11/2022,USD,SLD,ENB,41.885,-8,Decrease position
 11/11/2022,USD,SLD,FSM,3.47,-1115,exit position
@@ -220,11 +220,11 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 12/6/2022,USD,BOT,BTG,3.32,151,Increase position
 12/6/2022,USD,BOT,GRPN,7.66,13,Increase position
 12/12/2022,USD,BOT,GRPN,6.958,14,Increase position
-12/23/2022,EUR,BOT,VNA,21.73,9,Increase position
-12/29/2022,EUR,BOT,VNA,21.92,9,Increase position
+12/23/2022,EUR,BOT,VNA.DE,21.73,9,Increase position
+12/29/2022,EUR,BOT,VNA.DE,21.92,9,Increase position
 12/29/2022,USD,SLD,ENB,39.285,-33,exit position - tax
 12/29/2022,USD,SLD,WES,26.18,-30,exit position - tax
-2/13/2023,CAD,SLD,BEI.UN,57.72,-11,exit position
+2/13/2023,CAD,SLD,BEI-UN.TO,57.72,-11,exit position
 2/13/2023,USD,BOT,GRPN,7.13,14,Increase position
 2/13/2023,USD,BOT,KGC,4.175,100,Increase position
 2/15/2023,USD,BOT,KGC,3.92,100,Increase position
@@ -232,11 +232,11 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 2/21/2023,USD,BOT,AEM,46.05,21,New position
 2/27/2023,USD,BOT,AEM,45.59,5,Increase position
 2/21/2023,USD,BOT,BTG,3.32,151,Increase position
-2/27/2023,EUR,BOT,VNA,23.97,8,Increase position
-3/13/2023,EUR,BOT,VNA,20.56,10,Increase position
-3/20/2023,EUR,BOT,VNA,19.06,10,Increase position
-3/24/2023,EUR,BOT,VNA,17.065,40,Increase position
-3/29/2023,EUR,BOT,VNA,15.565,26,Increase position
+2/27/2023,EUR,BOT,VNA.DE,23.97,8,Increase position
+3/13/2023,EUR,BOT,VNA.DE,20.56,10,Increase position
+3/20/2023,EUR,BOT,VNA.DE,19.06,10,Increase position
+3/24/2023,EUR,BOT,VNA.DE,17.065,40,Increase position
+3/29/2023,EUR,BOT,VNA.DE,15.565,26,Increase position
 4/4/2023,USD,SLD,AEM,55.32,-10,Decrease position
 4/13/2023,USD,SLD,AEM,58.71,-16,exit position
 3/20/2023,USD,BOT,EPR,36.15,5,Increase position
@@ -254,10 +254,10 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 3/10/2023,USD,BOT,UNIT,4.23,47,Increase position
 3/20/2023,USD,BOT,UNIT,3.53,30,Increase position
 3/24/2023,USD,BOT,UNIT,3.26,30,Increase position
-4/17/2023,EUR,BOT,VNA,19.16,5.2192,Increase position
-4/24/2023,EUR,BOT,VNA,18.9525,5.2763,Increase position
-5/2/2023,EUR,BOT,VNA,19.19666667,5.2092,Increase position
-5/8/2023,EUR,BOT,VNA,18.38916667,5.4379,Increase position
+4/17/2023,EUR,BOT,VNA.DE,19.16,5.2192,Increase position
+4/24/2023,EUR,BOT,VNA.DE,18.9525,5.2763,Increase position
+5/2/2023,EUR,BOT,VNA.DE,19.19666667,5.2092,Increase position
+5/8/2023,EUR,BOT,VNA.DE,18.38916667,5.4379,Increase position
 4/17/2023,USD,BOT,ARE,118.54,25,New position
 4/17/2023,USD,BOT,GRPN,3.90461538,25.6107,Increase position
 4/24/2023,USD,BOT,GRPN,3.84592593,26.0015,Increase position
@@ -271,10 +271,10 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 4/24/2023,USD,BOT,RICK,74.24,1.3469,Increase position
 5/1/2023,USD,BOT,RICK,75.56,1.3234,Increase position
 5/8/2023,USD,BOT,RICK,75.11,1.3313,Increase position
-4/17/2023,USD,BOT,STAG,3.0778,32.49,Increase position
-5/1/2023,USD,BOT,STAG,2.9629,33.75,Increase position
-5/2/2023,EUR,BOT,VNA,19.19666667,5.2092,Increase position
-5/15/2023,EUR,BOT,VNA,18.375,5.4421,Increase position
+4/17/2023,USD,BOT,STAG,32.49,3.0778,Increase position
+5/1/2023,USD,BOT,STAG,33.75,2.9629,Increase position
+5/2/2023,EUR,BOT,VNA.DE,19.19666667,5.2092,Increase position
+5/15/2023,EUR,BOT,VNA.DE,18.375,5.4421,Increase position
 5/15/2023,USD,BOT,GRPN,3.1746875,31.4991,Increase position
 5/22/2023,USD,BOT,GRPN,4.25833333,23.4833,Increase position
 5/30/2023,USD,BOT,GRPN,5.18,19.305,Increase position
@@ -286,8 +286,8 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 5/15/2023,USD,BOT,RICK,72.61,1.3772,Increase position
 5/22/2023,USD,BOT,RICK,76.58,1.3058,Increase position
 5/30/2023,USD,BOT,RICK,74,1.3513,Increase position
-5/15/2023,USD,BOT,STAG,2.8776,34.75076923,Increase position
-5/30/2023,USD,BOT,STAG,2.9137,34.32,Increase position
+5/15/2023,USD,BOT,STAG,34.75076923,2.8776,Increase position
+5/30/2023,USD,BOT,STAG,34.32,2.9137,Increase position
 6/27/2023,USD,SLD,FPI,12.36,-60,Exit
 6/5/2023,USD,BOT,GRPN,6.00647059,16.6487,Increase position
 6/12/2023,USD,BOT,GRPN,5.0892,19.6494,Increase position
@@ -319,12 +319,12 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 9/27/2023,USD,BOT,MGDPF,0.4499,400,Increase position
 8/15/2023,USD,BOT,SAFE,20.615,30,Increase position
 9/27/2023,USD,BOT,SAFE,17.78,10,Increase position
-10/5/2023,USD,SLD,LAAC,6.11,-55,SPIN off LAC - 175.06 rlzd gain
+10/5/2023,USD,SLD,LAAC,6.11,0,"SPIN off LAC - 175.06 rlzd gain, #shrs 55"
 10/4/2023,USD,BOT,AEM,43.547,100,
 10/20/2023,USD,SLD,AEM 17NOV23 55 C,0.58,-1,"Write Call option, to reduce miners exposure"
 10/17/2023,USD,BOT,AEM 17NOV23 55 C,0,1,Expired
 11/3/2023,USD,SLD,KGC 15DEC23 6 C,0.13,-7,"Write Call option, to reduce miners exposure"
-11/20/2023,USD,BOT,IAUX,1.35,810,
+11/20/2023,USD,BOT,IAUX,1.35,600,
 11/24/2023,USD,SLD,LAC,7.11,-55,Exit full position - too small
 11/24/2023,USD,SLD,EQX,4.95,-50,Exit full position - too small
 11/28/2023,USD,SLD,MGDPF,0.5925,-4500,Exit - has been acquired reducing stake in PM sector
@@ -345,7 +345,7 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 1/19/2024,USD,BOT,GRPN 19JAN24 11 P,0,1,Expired
 1/19/2024,USD,BOT,AEM 19JAN24 60 C,0,1,Expired
 2/2/2024,USD,BOT,OXY 02FEB24 56 P,0,1,Expired
-1/25/2024,EUR,BOT,DIC,2.03,200,Increase position
+1/25/2024,EUR,BOT,BRNK.DE,2.03,200,Increase position
 1/25/2024,USD,BOT,BTG,2.68,1000,Increase position
 2/9/2024,USD,BOT,NEM 09FEB24 36 P,0,1,Assigned
 2/9/2024,USD,BOT,NEM,36,100,New holding assigned from sell put option 
@@ -360,7 +360,7 @@ Date,Curency,Action,Ticker,Price,Qty,Note
 3/28/2024,USD,BOT,NEM 28MAR24 29 P,0,1,Expired
 3/20/2024,USD,SLD,NEM 12APR24 36 C,0.49,-1,"Write Call option, to reduce miners exposure"
 3/15/2024,USD,SLD,SAFE 19APR24 20 P,0.97,-1,"Write Put option, bullish on SAFE"
-3/15/2024,USD,SLD,VICI 19APR24 27.5 P ,0.28,-1,"Write Put option, bullish on VICI"
+3/15/2024,USD,SLD,VICI 19APR24 27.5 P,0.28,-1,"Write Put option, bullish on VICI"
 4/19/2024,USD,BOT,AEM 19APR24 60 C ,0,1,Assigned
 4/12/2024,USD,BOT,NEM 12APR24 36 C,0,1,Assigned
 4/19/2024,USD,SLD,AEM,60,-100,Exit position
