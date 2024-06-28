@@ -9,13 +9,13 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-adress_portfolio_dataset = r'data/Portfolio_dataset_0524.csv'
-adress_log = r'Activity logs/Activity log 04302024.csv'
+adress_portfolio_dataset = r'data/Portfolio_dataset_0624.csv'
+adress_log = r'Activity logs/Activity log 05312024.csv'
 
 start_date_YE = '2023-12-29'
 end_date_YE = '2023-12-30'
-start_date_ME = '2024-04-30'
-end_date_ME = '2024-05-01'
+start_date_ME = '2024-05-31'
+end_date_ME = '2024-06-03'
 
 
 #emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -81,7 +81,7 @@ df_selection = df.query(
 
 
 #-----MAINPAGE-----
-st.title(":bar_chart: Portfolio Overview as of May 2024")
+st.title(":bar_chart: Portfolio Overview as of June 2024")
 st.markdown('##')
 
 #TOP KPI's
