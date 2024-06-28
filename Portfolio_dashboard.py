@@ -10,7 +10,7 @@ import plotly.express as px
 import streamlit as st
 
 adress_portfolio_dataset = r'data/Portfolio_dataset_0624.csv'
-adress_log = r'Activity logs/Activity log 05312024.csv'
+adress_log = r'Activity logs/Activity log 04302024.csv'
 
 start_date_YE = '2023-12-29'
 end_date_YE = '2023-12-30'
