@@ -81,7 +81,7 @@ df_selection = df.query(
 
 
 #-----MAINPAGE-----
-st.title(":bar_chart: Portfolio Overview as of June 2024")
+st.title(":bar_chart: Portfolio Overview as of AUG 2024")
 st.markdown('##')
 
 #TOP KPI's
