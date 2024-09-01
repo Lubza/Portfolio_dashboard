@@ -9,13 +9,13 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-adress_portfolio_dataset = r'data/Portfolio_dataset_0624.csv'
-adress_log = r'Activity logs/Activity log 04302024.csv'
+adress_portfolio_dataset = r'data/Portfolio_dataset_0824.csv'
+adress_log = r'Activity logs/Activity log 08302024.csv'
 
 start_date_YE = '2023-12-29'
 end_date_YE = '2023-12-30'
-start_date_ME = '2024-05-31'
-end_date_ME = '2024-06-03'
+start_date_ME = '2024-07-31'
+end_date_ME = '2024-08-01'
 
 
 #emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -92,7 +92,7 @@ Total_unrlzd = round(df_selection['Unrealized P&L in USD'].sum(), 2)
 
 #YTD portfolio performance
 Portfolio_YE23 =  74849.6
-deposits = 5363 + 2154
+deposits = 9705.45
 YTD_performance = round((((Account_balance - deposits - Portfolio_YE23) / Portfolio_YE23) * 100),2)
 
 #Dividend calculation
